@@ -1,10 +1,6 @@
-// app/icon.tsx
 import { ImageResponse } from "next/og";
 
-export const size = {
-    width: 32,
-    height: 32,
-};
+export const size = { width: 32, height: 32 };
 export const contentType = "image/png";
 
 export default function Icon() {
@@ -12,34 +8,34 @@ export default function Icon() {
         (
             <div
                 style={{
-                    background: "#7c3aed", // Roxo vibrante idêntico à imagem
+                    background: "#7a41e4",
                     width: "100%",
                     height: "100%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    borderRadius: "50%", // Formato circular perfeito
+                    borderRadius: "50%",
                 }}
             >
                 <svg
-                    xmlns="http://w3.org"
+                    xmlns="http://www.w3.org/2000/svg"
                     width="20"
                     height="20"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="#ffffff" // Linhas em branco
-                    strokeWidth="2.5" // Linhas ligeiramente mais grossas para destacar no Favicon
+                    stroke="#ffffff"
+                    strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                 >
-                    <path d="M19.07 4.93a10 10 0 0 0-14.14 0" />
-                    <path d="M16.24 7.76a6 6 0 0 0-8.49 0" />
-                    <path d="M12 12v.01" />
-                    <path d="M12 12a1 1 0 0 0-1-1" />
-                    <path d="M12 12a1 1 0 0 0 1-1" />
-                    <path d="M12 12a1 1 0 0 0-1 1" />
-                    <path d="M12 12a1 1 0 0 0 1 1" />
-                    <path d="M19.07 19.07A10 10 0 0 0 12 2" />
+                    <path d="M19.07 4.93A10 10 0 0 0 6.99 3.34" />
+                    <path d="M4 6h.01" />
+                    <path d="M2.29 9.62A10 10 0 1 0 21.31 8.35" />
+                    <path d="M16.24 7.76A6 6 0 1 0 8.23 16.67" />
+                    <path d="M12 18h.01" />
+                    <path d="M17.99 11.66A6 6 0 0 1 15.77 16.67" />
+                    <circle cx="12" cy="12" r="2" />
+                    <path d="m13.41 10.59 5.66-5.66" />
                 </svg>
             </div>
         ),
