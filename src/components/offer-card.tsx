@@ -125,6 +125,9 @@ export function OfferCard({
 
       <div className="relative aspect-square overflow-hidden bg-muted">
         <Image
+          width={500}
+          height={300}
+          quality={100}
           src={offer.img_link || "/placeholder.svg"}
           alt={offer.title}
           className="size-full object-cover transition-transform duration-300 group-hover:scale-105"

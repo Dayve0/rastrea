@@ -56,6 +56,7 @@ export function RastreaApp() {
   }, []);
 
   const runSearch = useCallback(async () => {
+
     const typed = query.trim();
     if (!typed || selected.size === 0) return;
 

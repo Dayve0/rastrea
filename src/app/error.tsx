@@ -15,7 +15,7 @@ export default function Error({ reset }: { error: Error & { digest?: string }; r
             setSeconds((current) => Math.max(current - 1, 0));
         }, 1000);
         const timeout = window.setTimeout(() => {
-            router.push("/");
+            reset();
         }, 3000);
 
         return () => {
@@ -48,7 +48,7 @@ export default function Error({ reset }: { error: Error & { digest?: string }; r
                             <RefreshCw data-icon="inline-start" />
                             Tentar novamente
                         </Button>
-                        <Button onClick={() => router.push("/")}>
+                        <Button onClick={reset}>
                             <Home data-icon="inline-start" />
                             Ir para o início
                         </Button>

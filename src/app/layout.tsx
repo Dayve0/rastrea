@@ -3,7 +3,6 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toast";
-import { Radar } from "lucide-react";
 
 const inter = Inter({
   subsets: ["latin"],

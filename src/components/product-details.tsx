@@ -45,7 +45,11 @@ export function ProductDetailSheet({
                 {offer && store && (
                     <div className="flex flex-col gap-4 py-6">
                         <div className="relative flex items-center justify-center overflow-hidden rounded-2xl bg-transparent">
-                            <Image src={offer.img_link || "/placeholder.svg"} alt={offer.title} className="aspect-square w-3/5 object-cover " />
+                            <Image
+                                width={500}
+                                height={300}
+                                quality={100}
+                                src={offer.img_link || "/placeholder.svg"} alt={offer.title} className="aspect-square w-3/5 object-cover " />
                             {discount > 0 && (
                                 <span className="absolute right-4 top-4 rounded-lg bg-destructive px-2.5 py-1 text-xs font-bold text-primary-foreground">-{discount}% OFF</span>
                             )}
