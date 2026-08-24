@@ -17,7 +17,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Rastrea — Comparador de preços em vários sites",
+  title: "Rastrea — Comparador de preços",
   description:
     "Busque um produto e compare preços de várias lojas ao mesmo tempo. Encontre a melhor oferta sem abrir mil abas.",
 };
