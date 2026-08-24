@@ -1,6 +1,5 @@
 "use client";
 
-import { Copy, ExternalLink, Package, Store, Star, Tag, Truck, Banknote, Laptop, BanknoteArrowDown, Users2, CreditCard } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
     Sheet,
@@ -8,8 +7,9 @@ import {
 } from "@/components/ui/sheet";
 import { STORE_MAP } from "@/lib/stores";
 import type { Offer } from "@/lib/types";
-import { toast } from "./ui/toast";
+import { Banknote, BanknoteArrowDown, Copy, CreditCard, ExternalLink, Hammer, Laptop, Package, Star, Store, Tag, Truck, Users2 } from "lucide-react";
 import Image from "next/image";
+import { toast } from "./ui/toast";
 
 const brl = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
 
@@ -64,7 +64,8 @@ export function ProductDetailSheet({
                             <InfoItem icon={CreditCard} label="Parcelas" value={offer.max_parcels ? `${offer.max_parcels}` : "Não informado"} />
                             <InfoItem icon={Star} label="Nota" value={offer.rating ? offer.rating.toFixed(1) : "Nenhuma"} />
                             <InfoItem icon={Users2} label="Avaliações" value={offer.ratingCount ? `${offer.ratingCount}` : "Nenhuma"} />
-                            <InfoItem icon={Package} label="Fabricante" value={offer.manufacturer || "Não informado"} />
+                            <InfoItem icon={Hammer} label="Fabricante" value={offer.manufacturer || "Não informado"} />
+                            <InfoItem icon={Package} label="Estoque" value={offer.stock ? `${offer.stock}` : "Não informado"} />
                             <InfoItem icon={Store} label="Vendedora" value={offer.seller || store.name} />
                             <InfoItem icon={Laptop} label="Site encontrado" value={store.name} />
                             <InfoItem icon={Truck} label="Entrega" value={offer.free_shipping ? "Frete grátis" : "Frete calculado"} />

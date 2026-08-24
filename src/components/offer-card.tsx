@@ -4,7 +4,7 @@ import { StoreLogo } from "@/components/store-logo";
 import { STORE_MAP } from "@/lib/stores";
 import type { Offer } from "@/lib/types";
 import { cn } from "@/lib/utils";
-import { ExternalLink, Star, Trophy } from "lucide-react";
+import { CircleAlert, ExternalLink, Star, Trophy, Truck } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -137,11 +137,6 @@ export function OfferCard({
             -{discount}% OFF
           </span>
         )}
-        {offer.free_shipping && (
-          <span className="absolute left-3 top-3 rounded-lg bg-savings px-2 py-0.5 text-xs font-bold text-white">
-            Frete grátis
-          </span>
-        )}
       </div>
 
       <div className="flex flex-1 flex-col gap-2.5 p-4">
@@ -172,9 +167,23 @@ export function OfferCard({
             </span>
           </div>
           <p className="text-sm text-muted-foreground">
-            {offer.pix_price < offer.current_price ? `Ou ${brl.format(offer.current_price)}` : `Ou ${brl.format(offer.pix_price)}`} em até {offer.max_parcels}
+            {offer.pix_price < offer.current_price ? `Ou ${brl.format(offer.current_price)}` : `Ou ${brl.format(offer.pix_price)}`} em até {offer.max_parcels} no cartão
           </p>
         </div>
+
+        {offer.free_shipping && (
+          <span className="inline-flex w-fit items-center gap-1 rounded-full bg-savings/40 px-2 py-0.5 text-xs font-semibold text-savings-foreground dark:text-savings">
+            <Truck className="size-3.5" />
+            Frete grátis
+          </span>
+        )}
+
+        {offer.stock < 10 && offer.stock > 0 && (
+          <span className="inline-flex w-fit items-center gap-1 rounded-full bg-red-400/40 px-2 py-0.5 text-xs font-semibold text-savings-foreground dark:text-savings">
+            <CircleAlert className="size-3.5" />
+            Poucas unidades
+          </span>
+        )}
 
         <a
           href={offer.source}
